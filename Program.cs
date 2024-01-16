@@ -431,8 +431,27 @@ namespace ConsoleApplication1
         //     bool bret = GetData(10, 20, out c, out d);
         // }
 
-        int Calc(int a, int b, string calcType = "+")
+        // int Calc(int a, int b, string calcType = "+")
+        // {
+        //     switch (calcType)
+        //     {
+        //         case "+":
+        //             return a + b;
+        //         case "-":
+        //             return a - b;
+        //         case "*":
+        //             return a * b;
+        //         case "/":
+        //             return a / b;
+        //         default:
+        //             throw new ArithmeticException();
+        //     }
+        // }
+        int Calc(string calcType = "+", params int[] values)
         {
+            int a = values[0];
+            int b = values[1];
+
             switch (calcType)
             {
                 case "+":
@@ -451,10 +470,15 @@ namespace ConsoleApplication1
         static void Main(string[] args)
         {
             Program p = new Program();
-            int ret = p.Calc(1, 2);
+            int ret = p.Calc("*", 1, 2);
             Console.WriteLine(ret);
-            ret = p.Calc(1, 2, "*");
+            ret = p.Calc("+", 1, 2);
             Console.WriteLine(ret);
         }
+
+        //메서드
+
+
+        //사용
     }
 }
