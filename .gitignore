@@ -1,3 +1,6 @@
 ## C#
 bin/
 obj/
+img/
+videos/
+c-.*

@@ -447,38 +447,113 @@ namespace ConsoleApplication1
         //             throw new ArithmeticException();
         //     }
         // }
-        int Calc(string calcType = "+", params int[] values)
-        {
-            int a = values[0];
-            int b = values[1];
+        // int Calc(string calcType = "+", params int[] values)
+        // {
+        //     int a = values[0];
+        //     int b = values[1];
 
-            switch (calcType)
-            {
-                case "+":
-                    return a + b;
-                case "-":
-                    return a - b;
-                case "*":
-                    return a * b;
-                case "/":
-                    return a / b;
-                default:
-                    throw new ArithmeticException();
-            }
-        }
+        //     switch (calcType)
+        //     {
+        //         case "+":
+        //             return a + b;
+        //         case "-":
+        //             return a - b;
+        //         case "*":
+        //             return a * b;
+        //         case "/":
+        //             return a / b;
+        //         default:
+        //             throw new ArithmeticException();
+        //     }
+        // }
 
-        static void Main(string[] args)
-        {
-            Program p = new Program();
-            int ret = p.Calc("*", 1, 2);
-            Console.WriteLine(ret);
-            ret = p.Calc("+", 1, 2);
-            Console.WriteLine(ret);
-        }
+        // static void Main(string[] args)
+        // {
+        //     Program p = new Program();
+        //     int ret = p.Calc("*", 1, 2);
+        //     Console.WriteLine(ret);
+        //     ret = p.Calc("+", 1, 2);
+        //     Console.WriteLine(ret);
+        // }
 
-        //메서드
+        // //메서드
 
 
-        //사용
+        // //사용
+
+        // 클래스 내의 이벤트 정의
+        // class MyButton
+        // {
+        //     public string Text;
+        //     // 이벤트 정의
+        //     public event EventHandler Click;
+
+        //     public void MouseButtonDown()
+        //     {
+        //         if (this.Click != null)
+        //         {
+        //             // 이벤트핸들러들을 호출
+        //             Click(this, EventArgs.Empty);
+        //         }
+        //     }
+        // }
+
+        // // 이벤트 사용
+        // public void Run()
+        // {
+        //     MyButton btn = new MyButton();
+        //     // Click 이벤트에 대한 이벤트핸들러로
+        //     // btn_Click 이라는 메서드를 지정함
+        //     btn.Click += new EventHandler(btn_Click);
+        //     btn.Text = "Run";
+        //     //....
+        // }
+
+        // void btn_Click(object sender, EventArgs e)
+        // {
+        //     MessageBox.Show("Button 클릭");
+        // }
+
+        //         class MyButton
+        // {
+        //     // 이벤트 정의하는 다른 방법
+        //     private EventHandler _click;
+        //     public event EventHandler Click
+        //     {
+        //         add
+        //         {
+        //             _click += value;
+        //             // _click = value;   // 싱글캐스트
+        //         }
+        //         remove
+        //         {
+        //             _click -= value;
+        //         }
+        //     }
+
+        //     public void MouseButtonDown()
+        //     {
+        //         if (this._click != null)
+        //         {
+        //             // 이벤트핸들러들을 호출
+        //             _click(this, EventArgs.Empty);                                
+        //         }
+        //     }
+
+        //     /* 속성 정의
+        //     private string _name;
+        //     public string Name 
+        //     {
+        //         get
+        //         {
+        //             return _name;
+        //         }
+        //         set
+        //         {
+        //             _name = value;
+        //         }
+        //     }
+        //     */
+        // }
     }
 }
